@@ -195,6 +195,7 @@
 ### Тестирование
 
 Скриншоты результата работы программы
+
 Создание списка 1: <img width="763" height="751" alt="image" src="https://github.com/user-attachments/assets/c1e54dd1-1336-4940-a6db-21d2965a6f7f" />
 
 Добавление элемента в список 1: <img width="854" height="929" alt="image" src="https://github.com/user-attachments/assets/28e9417c-8741-4604-939e-5b28a4c31324" />
