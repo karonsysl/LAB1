@@ -1,7 +1,7 @@
 ﻿
 open System
 let rec readElement () = 
-    printf "Введите элемент(целое или вещественное число): "
+    printf "Введите элемент списка: "
     let element= Console.ReadLine()
     try
         // Преобразовываем число во float
@@ -15,13 +15,13 @@ let rec readElement () =
         readElement () 
 
 let rec readSize () = 
-    printf "Введите количество (целое неотрицательное число): "
+    printf "Введите количество элем: "
     let size = Console.ReadLine()
     try
         // Преобразовываем строку в intчисло
         let value = int size 
         if value < 0 then
-            printfn "Ошибка: число не может быть отрицательным."
+            printfn "Ошибка: не может быть <0."
             readSize ()
         else
             value

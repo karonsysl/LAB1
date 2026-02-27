@@ -6,13 +6,13 @@ let rec readNatural () =
     try
         let value = int element
         if value < 0 then
-            printfn "Ошибка: число не может быть отрицательным."
+            printfn "Ошибка: не может быть <0"
             readNatural ()
         else
             value
     with
     | :? FormatException ->
-        printfn "Ошибка: введите целое число."
+        printfn "Ошибка: введите целое число"
         readNatural ()
 
 let rec productDigits n: int = 
@@ -28,5 +28,5 @@ let main args =
     let result = 
         if value = 0 then 0
         else productDigits value
-    printfn "Произведение цифр натурального числа: %d" result
+    printfn "Произведение цифр нат.числа: %d" result
     0

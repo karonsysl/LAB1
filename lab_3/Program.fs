@@ -3,29 +3,29 @@
 // Проверка ввода целого 
 //неотрицательного числа размерности
 let rec readSize () = 
-    printf "Введите размер списка(целое неотрицательное число): "
+    printf "Введите размер списка: "
     let sizeList = Console.ReadLine()
     try
         let value = int sizeList
         if value < 0 then
-            printfn "Ошибка: число не может быть отрицательным."
+            printfn "Ошибка: не может быть <0."
             readSize()
         else
             value
     with
         | :? FormatException ->
-            printfn "Ошибка: нужно ввести целое число."
+            printfn "Ошибка: нужно ввести целое."
             readSize()
 
 // Проверка элемента(float или int)
 let rec readElement () = 
-    printf "Введите элемент списка (число): "
+    printf "Введите элемент списка: "
     let element = Console.ReadLine()
     try
         float element
     with
         | :? FormatException ->
-            printfn "Ошибка: нужно ввести число."
+            printfn "Ошибка: нужно число."
             readElement()
 
 // Функция добавления элемента
@@ -80,7 +80,7 @@ let rec getByIndex list index =
     | _ :: tail, _ when index > 0 -> 
     // Уменьшаем индекс и идём дальше
         getByIndex tail (index - 1)             
-    | _ -> failwith "Индекс не может быть отрицательным"
+    | _ -> failwith "Индекс не может быть <0"
 
 let rec createList size = 
     if size = 0 then
