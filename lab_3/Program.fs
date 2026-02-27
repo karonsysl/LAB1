@@ -1,6 +1,7 @@
 ﻿open System
 
-//Проверка ввода целого неотрицательного числа размерности
+// Проверка ввода целого 
+//неотрицательного числа размерности
 let rec readSize () = 
     printf "Введите размер списка(целое неотрицательное число): "
     let sizeList = Console.ReadLine()
@@ -16,7 +17,7 @@ let rec readSize () =
             printfn "Ошибка: нужно ввести целое число."
             readSize()
 
-//проверка элемента(float или int)
+// Проверка элемента(float или int)
 let rec readElement () = 
     printf "Введите элемент списка (число): "
     let element = Console.ReadLine()
@@ -27,44 +28,58 @@ let rec readElement () =
             printfn "Ошибка: нужно ввести число."
             readElement()
 
-// Функция добавления элемента в конец списка
+// Функция добавления элемента
+//в конец списка
 let rec addElement list element = 
     match list with
-    | [] -> [element] // Если список пустой — создаём новый список с элементом
+    // Если список пустой 
+    // То создаём новый список с элементом
+    | [] -> [element] 
+    // Иначе сохраняем голову
+    //и рекурсивно добавляем элемент в хвост
     | head :: tail -> head :: addElement tail element  
-    // Иначе сохраняем голову и рекурсивно добавляем элемент в хвост
 
 // Удаление первого найденного элемента
 let rec removeElement list element = 
     match list with
-    | [] -> []                               // Пустой список-ничего удалять
+    // Пустой список-ничего удалять
+    | [] -> []                               
     | head :: tail ->
-        if head = element then tail          // Если нашли элемент- возвращаем хвост (удаляем)
+        // Если нашли элемент
+        // То возвращаем хвост (удаляем)
+        if head = element then tail          
         else head :: removeElement tail element
         // Иначе сохраняем голову и продолжаем поиск
 
 // Проверка наличия элемента в списке
 let rec contains list element = 
     match list with
-    | [] -> false                      // Если дошли до конца - элемента нет
+    // Если дошли до конца-элемента нет
+    | [] -> false                      
     | head :: tail ->
-        if head = element then true    // Если нашли -возвращаем true
-        else contains tail element     // Иначе продолжаем поиск
+        // Если нашли -возвращаем true
+        if head = element then true   
+        // Иначе продолжаем поиск
+        else contains tail element     
 
 // Объединение двух списков
 let rec concat list1 list2 = 
     match list1 with
-    | [] -> list2                      // Если первый список пуст-возвращаем второй
+    // Если 1 список пуст-возвращаем 2
+    | [] -> list2                      
+    // Иначе добавляем элементы 1 списка к началу 2
     | head :: tail -> head :: concat tail list2
-    // Иначе добавляем элементы первого списка к началу второго
 
 // Получение элемента по индексу
 let rec getByIndex list index = 
     match list, index with
-    | [], _ -> failwith "Индекс вне диапазона"   // Если список закончился
-    | head :: _, 0 -> head                      // Если индекс 0- возвращаем голову
+    // Если список закончился
+    | [], _ -> failwith "Индекс вне диапазона" 
+    // Если индекс 0- возвращаем голову
+    | head :: _, 0 -> head                      
     | _ :: tail, _ when index > 0 -> 
-        getByIndex tail (index - 1)             // Уменьшаем индекс и идём дальше
+    // Уменьшаем индекс и идём дальше
+        getByIndex tail (index - 1)             
     | _ -> failwith "Индекс не может быть отрицательным"
 
 let rec createList size = 
