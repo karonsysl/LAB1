@@ -18,7 +18,7 @@
 
 Мы превращаем его в число. Проверяем: корректный ли формат ввода.
 
-Если всё хорошо - возвращаем число. Иначе выдает сообщение об ошибке и рекурсивный вызов этой же функции для повторного ввода.
+Если всё хорошо — возвращаем число. Иначе выдает сообщение об ошибке и рекурсивный вызов этой же функции для повторного ввода.
 
 Аналогично предлагаем пользователю ввести количество элементов списка(size), проверяем корректность: не отрицательное ли оно, корректный ли формат ввода.
 
@@ -29,7 +29,7 @@
 ### Тестирование
 
 Скриншоты результата работы программы
-<img width="1491" height="643" alt="image" src="https://github.com/user-attachments/assets/8986337f-6c0e-4eb3-8d7c-4ab54c43efc1" />
+
 
 
 # Задание 2. Рекурсия
@@ -75,8 +75,6 @@
 ### Тестирование
 
 Скриншоты результата работы программы
-<img width="1480" height="915" alt="image" src="https://github.com/user-attachments/assets/82772733-978c-4a21-9e22-d0be9053bea9" />
-<img width="1564" height="568" alt="image" src="https://github.com/user-attachments/assets/54230215-a400-4057-9a84-234d8418cbb6" />
 
 
 
@@ -195,16 +193,4 @@
 ### Тестирование
 
 Скриншоты результата работы программы
-
-Создание списка 1: <img width="763" height="751" alt="image" src="https://github.com/user-attachments/assets/c1e54dd1-1336-4940-a6db-21d2965a6f7f" />
-
-Добавление элемента в список 1: <img width="854" height="929" alt="image" src="https://github.com/user-attachments/assets/28e9417c-8741-4604-939e-5b28a4c31324" />
-
-Удаление элемента: <img width="851" height="880" alt="image" src="https://github.com/user-attachments/assets/72c5e69b-0cf5-44a7-a0e8-057e73864e68" />
-
-Поиск элемента: <img width="554" height="428" alt="image" src="https://github.com/user-attachments/assets/2876febd-69df-4adc-b606-c616104bef71" />
-
-Получить элемент по индексу: <img width="584" height="567" alt="image" src="https://github.com/user-attachments/assets/8d0de596-e82f-45e9-a7bf-8067280afdda" />
-
-Сцепка со 2 списком: <img width="1236" height="573" alt="image" src="https://github.com/user-attachments/assets/47fa247e-91f7-404d-8010-eec596ea4641" />
 

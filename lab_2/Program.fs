@@ -16,7 +16,8 @@ let rec readNatural () =
         readNatural ()
 
 let rec productDigits n: int = 
-    if n < 10 then n
+    if n < 10 then 
+        n
     else
         let digit = n % 10
         let rest = n / 10
@@ -26,7 +27,9 @@ let rec productDigits n: int =
 let main args = 
     let value = readNatural()
     let result = 
-        if value = 0 then 0
-        else productDigits value
+        if value = 0 then 
+            0
+        else
+            productDigits value
     printfn "Произведение цифр нат.числа: %d" result
     0

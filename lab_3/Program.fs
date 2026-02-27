@@ -42,14 +42,12 @@ let rec addElement list element =
 // Удаление первого найденного элемента
 let rec removeElement list element = 
     match list with
-    // Пустой список-ничего удалять
     | [] -> []                               
     | head :: tail ->
-        // Если нашли элемент
-        // То возвращаем хвост (удаляем)
-        if head = element then tail          
-        else head :: removeElement tail element
-        // Иначе сохраняем голову и продолжаем поиск
+        if head = element then 
+            tail          
+        else 
+            head :: removeElement tail element
 
 // Проверка наличия элемента в списке
 let rec contains list element = 
@@ -58,9 +56,11 @@ let rec contains list element =
     | [] -> false                      
     | head :: tail ->
         // Если нашли -возвращаем true
-        if head = element then true   
+        if head = element then 
+            true   
         // Иначе продолжаем поиск
-        else contains tail element     
+        else 
+            contains tail element     
 
 // Объединение двух списков
 let rec concat list1 list2 = 
